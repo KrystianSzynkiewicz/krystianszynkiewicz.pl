@@ -1,0 +1,57 @@
+
+/* CUBE */
+
+#cube-container {
+    box-sizing: border-box;
+    transform-style: preserve-3d; 
+    
+  
+    width: 350px;
+    height: 350px;
+    transition: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translate(-50%, -50%);
+  
+    position: absolute;
+    top: 60vh;
+    left: 75vw;
+  }
+  #cube-container .face {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border: 2px solid #ed3403;
+    background: #ed340370;
+    box-shadow: 0px 0px 150px #ed3403;
+  }
+  #cube-container .face.top {
+    transform: rotateX(90deg);
+    margin-top: -50%;
+  }
+  #cube-container .face.right {
+    transform: rotateY(90deg);
+    margin-left: 50%;
+  }
+  #cube-container .face.left {
+    transform: rotateY(-90deg);
+    margin-left: -50%;
+  }
+  #cube-container .face.bottom {
+    transform: rotateX(90deg);
+    margin-top: 50%;
+  }
+  #cube-container .face.back {
+    transform: translateZ(125px);
+  }
+  #cube-container .face.front {
+    transform: translateZ(-125px);
+  }
+  #cube-container:hover {
+    transform: rotateX(-25deg) rotateY(-40deg) translate(-50%, -50%);
+    transition: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .cube__position {
+    display: flex;
+    justify-content: space-around;
+  }
+  
